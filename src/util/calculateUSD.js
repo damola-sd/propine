@@ -19,4 +19,21 @@ const calculateInUSD = async (val) => {
   }
 };
 
+// const data = { BTC: 0.085935, ETH: 0.533424, XRP: 0.945639 };
+
+// let count = 0;
+// const portfolio = {};
+// const numberOfTokens = Object.keys(data).length;
+
+// Object.keys(data).forEach(async (val, index) => {
+//   const res = await calculateInUSD(val);
+//   data[val] = data[val] * res.USD;
+//   count++;
+//   if (count === numberOfTokens) {
+//     console.log(data);
+//   }
+//   // console.log("inside", data);
+// });
+// // console.log("outside", data);
+
 module.exports = calculateInUSD;

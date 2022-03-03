@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "bin": {
-    "propine": "node --max-old-space=size=4000 ./index.js"
+    "propine": "./index.js"
   },
   "author": "",
   "license": "ISC",
