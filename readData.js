@@ -66,6 +66,17 @@ const noParams = (stream) => {
 async function processNoParams() {
   const data = await noParams(DB());
   console.log(data);
+  Object.keys(data).forEach((val, index) => {
+    calculateInUSD(val).then((result) => {
+      //   console.log(result);
+      data[val] = data[val] * result.USD;
+      chalk.red.bold(data);
+      if (Object.keys(data).length === index) {
+        chalk.red.bold(data);
+        console.log(data);
+      }
+    });
+  });
 }
 
 module.exports = { readData, processNoParams };
